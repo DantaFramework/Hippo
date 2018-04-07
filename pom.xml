@@ -38,9 +38,18 @@
 
     <properties>
         <hippo.essentials.version>4.1.0</hippo.essentials.version>
+        <!-- Version for view templating support module for Handlebars.java -->
+        <forge.templating-support.version>1.0.1-SNAPSHOT</forge.templating-support.version>
     </properties>
 
     <dependencies>
+        <!--  View templating support module for Handlebars.java  -->
+        <dependency>
+            <groupId>org.onehippo.forge.templating-support</groupId>
+            <artifactId>templating-support-handlebars</artifactId>
+            <version>${forge.templating-support.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.onehippo.cms7.hst</groupId>
             <artifactId>hst-client</artifactId>
@@ -87,6 +96,12 @@
             <name>Hippo maven 2 repository.</name>
             <url>https://maven.onehippo.com/maven2/</url>
         </repository>
-    </repositories>
 
+        <!-- Community project to support various templating technologies  -->
+        <repository>
+            <id>hippo-maven2</id>
+            <name>Hippo Maven 2 Repository</name>
+            <url>https://maven.onehippo.com/maven2-forge/</url>
+        </repository>
+    </repositories>
 </project>

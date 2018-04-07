@@ -1,0 +1,48 @@
+/content/documents/hippodemo/title-demo:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 6dfbba78-4f04-4aba-ac96-674c9c50acf9
+  hippo:name: Title Demo
+  /title-demo[1]:
+    jcr:primaryType: hippodemo:title
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 6308892c-2adc-481a-ac4b-8dac3754acef
+    hippo:availability: []
+    hippodemo:text: Value for description.
+    hippodemo:title: Value for Title
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-03-27T11:33:20.433+13:00
+    hippostdpubwf:lastModificationDate: 2018-04-07T18:39:36.882+12:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: f5cc054a-ec63-493e-850b-8f385f08a57b
+    hippotranslation:locale: en
+  /title-demo[2]:
+    jcr:primaryType: hippodemo:title
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 3d4f8af7-9cf6-4fca-a1df-33293635a864
+    hippo:availability: [preview]
+    hippodemo:text: Value for description.
+    hippodemo:title: Value for Title
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-03-27T11:33:20.433+13:00
+    hippostdpubwf:lastModificationDate: 2018-03-27T11:33:54.393+13:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: f5cc054a-ec63-493e-850b-8f385f08a57b
+    hippotranslation:locale: en
+  /title-demo[3]:
+    jcr:primaryType: hippodemo:title
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 40608997-4399-484a-b3d1-e2f8933bc8a0
+    hippo:availability: [live]
+    hippodemo:text: Value for description.
+    hippodemo:title: Value for Title
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-03-27T11:33:20.433+13:00
+    hippostdpubwf:lastModificationDate: 2018-03-27T11:33:54.393+13:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2018-03-27T11:33:59.464+13:00
+    hippotranslation:id: f5cc054a-ec63-493e-850b-8f385f08a57b
+    hippotranslation:locale: en

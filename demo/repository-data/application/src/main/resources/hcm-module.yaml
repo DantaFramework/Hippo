@@ -1,0 +1,6 @@
+group: 
+  name: hippo-demo
+  after: hippo-cms
+project: hippo-demo
+module:
+  name: hippo-demo-repository-data-application

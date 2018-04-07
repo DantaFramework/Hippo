@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/hippodemo/hst:components/titlecomponent:
+      jcr:primaryType: hst:component
+      hst:componentclassname: danta.hippodemo.components.TitleComponent

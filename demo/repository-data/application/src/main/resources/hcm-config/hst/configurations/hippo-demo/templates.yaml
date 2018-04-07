@@ -1,0 +1,7 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/hippodemo/hst:templates:
+      jcr:primaryType: hst:templates
+      /homepage:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/danta/home.d

@@ -1,0 +1,8 @@
+/content/documents/hippodemo:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 344482fc-db1b-4fe4-98ba-a76ea1d2cd13
+  hippo:name: Hippo Danta Demo
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 996bcac5-86cf-49b5-a7a3-16a74863e814
+  hippotranslation:locale: en

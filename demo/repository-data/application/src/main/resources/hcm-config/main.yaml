@@ -1,0 +1,27 @@
+definitions:
+  namespace:
+    hippodemo:
+      uri: http://www.onehippo.org/hippodemo/nt/1.0
+      cnd: namespaces/hippo-demo.cnd
+  config:
+    /hippo:configuration/hippo:modules/webfiles/hippo:moduleconfig:
+      watchedModules: [repository-data/webfiles]
+      includedFiles:
+        operation: add
+        type: string
+        value: ['*.d']
+    /hippo:configuration/hippo:domains/hippofolders/readonly:
+      hipposys:groups:
+        operation: add
+        type: string
+        value: [sitewriters]
+    /hippo:configuration/hippo:domains/preview-documents/readonly:
+      hipposys:groups:
+        operation: add
+        type: string
+        value: [previewusers]
+    /hippo:configuration/hippo:domains/live-documents/readonly:
+      hipposys:groups:
+        operation: add
+        type: string
+        value: [liveusers]

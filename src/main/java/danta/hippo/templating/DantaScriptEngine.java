@@ -19,13 +19,13 @@
 
 package danta.hippo.templating;
 
-import javax.servlet.ServletException;
 import javax.servlet.ServletConfig;
 
-import org.onehippo.forge.templating.support.handlebars.servlet.HandlebarsHstTemplateServlet;
-
+import org.onehippo.forge.templating.support.handlebars.servlet.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.github.jknack.handlebars.Handlebars;
 
 public class DantaScriptEngine extends HandlebarsHstTemplateServlet {
 
@@ -34,10 +34,19 @@ public class DantaScriptEngine extends HandlebarsHstTemplateServlet {
     public static final String START_DELIM = "{%";
     public static final String END_DELIM = "%}";
 
+    /**
+     * This method is invoked from HttpServlet#init(...) after initializing the handlebars to register
+     * any extra helpers. Its parent method is designed to be extended for any customization as well in child class,
+     * having a chance to access the internal handlebars object.
+     * @param config ServletConfig instance
+     * @param handlebars Handlebars instance
+     */
     @Override
-    protected void initializeTemplateEngine(ServletConfig config) throws ServletException {
-        super.initializeTemplateEngine(config);
+    protected void registerHelpers(ServletConfig config, Handlebars handlebars) {
+        super.registerHelpers(config, handlebars);
 
-        setDelimiters(START_DELIM, END_DELIM);
+        handlebars.setStartDelimiter(START_DELIM);
+        handlebars.setEndDelimiter(END_DELIM);
     }
+
 }

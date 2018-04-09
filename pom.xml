@@ -22,9 +22,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.onehippo.cms7</groupId>
-        <artifactId>hippo-cms7-project</artifactId>
-        <version>29.3</version>
+        <groupId>io.tikaltechnologies.danta</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.2-SNAPSHOT</version>
+        <relativePath>../Parent/pom.xml</relativePath>
     </parent>
 
     <name>Danta Hippo</name>
@@ -43,31 +44,6 @@
     </properties>
 
     <dependencies>
-        <!--  View templating support module for Handlebars.java  -->
-        <dependency>
-            <groupId>org.onehippo.forge.templating-support</groupId>
-            <artifactId>templating-support-handlebars</artifactId>
-            <version>${forge.templating-support.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.onehippo.cms7.hst</groupId>
-            <artifactId>hst-client</artifactId>
-            <version>5.1.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.onehippo.cms7.hst</groupId>
-            <artifactId>hst-commons</artifactId>
-            <version>5.1.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.onehippo.cms7</groupId>
-            <artifactId>hippo-repository-api</artifactId>
-            <version>5.1.2</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -84,6 +60,21 @@
             <artifactId>json-smart</artifactId>
             <version>2.3</version>
         </dependency>
+
+        <!--  View templating support module for Handlebars.java  -->
+        <dependency>
+            <groupId>org.onehippo.forge.templating-support</groupId>
+            <artifactId>templating-support-handlebars</artifactId>
+            <version>${forge.templating-support.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.onehippo.cms7.hst</groupId>
+            <artifactId>hst-commons</artifactId>
+            <version>5.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -98,10 +89,12 @@
         </repository>
 
         <!-- Community project to support various templating technologies  -->
+        <!--
         <repository>
             <id>hippo-maven2</id>
             <name>Hippo Maven 2 Repository</name>
             <url>https://maven.onehippo.com/maven2-forge/</url>
         </repository>
+        -->
     </repositories>
 </project>

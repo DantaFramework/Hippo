@@ -35,66 +35,58 @@
     <groupId>io.tikaltechnologies.danta</groupId>
     <artifactId>hippo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>danta.hippo</Bundle-SymbolicName>
+                        <Bundle-Name>Danta Hippo</Bundle-Name>
+                        <Export-Package>
+                            danta.hippo.templating.Command
+                        </Export-Package>
+                        <Embed-Dependency>sling-query, json-smart</Embed-Dependency>
+                        <DynamicImport-Package>*</DynamicImport-Package>
+                        <Bundle-Activator>danta.hippo.HippoActivator</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <show>private</show>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20</version>
+            </plugin>
+        </plugins>
+
+        <defaultGoal>install</defaultGoal>
+    </build>
 
     <properties>
-        <hippo.essentials.version>4.1.0</hippo.essentials.version>
-        <!-- Version for view templating support module for Handlebars.java -->
-        <forge.templating-support.version>1.0.1-SNAPSHOT</forge.templating-support.version>
+
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.jknack</groupId>
-            <artifactId>handlebars</artifactId>
-            <version>4.0.6</version>
-        </dependency>
-        <dependency>
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
-            <version>2.3</version>
+            <version>1.0.9</version>
         </dependency>
-
-        <!--  View templating support module for Handlebars.java  -->
-        <dependency>
-            <groupId>org.onehippo.forge.templating-support</groupId>
-            <artifactId>templating-support-handlebars</artifactId>
-            <version>${forge.templating-support.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.onehippo.cms7.hst</groupId>
-            <artifactId>hst-commons</artifactId>
-            <version>5.1.1</version>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
-    <build>
-        <defaultGoal>install</defaultGoal>
-    </build>
-
     <repositories>
-        <repository>
-            <id>hippo</id>
-            <name>Hippo maven 2 repository.</name>
-            <url>https://maven.onehippo.com/maven2/</url>
-        </repository>
 
-        <!-- Community project to support various templating technologies  -->
-        <!--
-        <repository>
-            <id>hippo-maven2</id>
-            <name>Hippo Maven 2 Repository</name>
-            <url>https://maven.onehippo.com/maven2-forge/</url>
-        </repository>
-        -->
     </repositories>
 </project>
